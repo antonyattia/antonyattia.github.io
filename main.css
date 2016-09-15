@@ -12,10 +12,9 @@
 }
 
 .about {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 140%;
   max-width: 32.5em;
-  text-rendering: optimizeLegibility;
 }
 
 .contact {

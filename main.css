@@ -13,9 +13,8 @@
 
 .about {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 140%;
+  font-size: 130%;
   max-width: 32.5em;
-  text-rendering: optimizeLegibility;
 }
 
 .contact {

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work Term Report: University of Guelph - School of Computer Science</title>
+
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar navbar-default navbar-static-top" style="margin: auto">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../index.html">University of Guelph - School of Computer Science</a>
+          </div>
+          <ul class="nav navbar-nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+            <li><a data-toggle="tab" href="#about">About UoG/SoCS</a></li>
+            <li><a data-toggle="tab" href="#description_goals">Job Description & Goals</a></li>
+            <li><a data-toggle="tab" href="#conclusion_acknowledgements">Conclusion & Acknowledgements</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <div class="tab-content">
+        <!-- Home -->
+        <div class="jumbotron row tab-pane fade in active" id="home" style="text-align: center">
+          <img src="guelph-logo.jpg" class="col-lg-5 img-rounded img-responsive" style="max-width: 34.8%; right: -4%">
+          <img src="johnston.jpg" class="col-lg-7 img-rounded img-responsive" style="right: -3%">
+          <p class="col-lg-12" style="padding-top: 1.25em;">This site is about my Summer 2016 work term at the School of Computer Science in the University of Guelph. I will be outlining my experiences with the SoCS, as well as what I've learned and my reflections.</p>
+        </div>
+
+        <!-- About -->
+        <div class="jumbotron row tab-pane fade" id="about" style="text-align: left">
+          <img src="SoCS.jpg" class="col-lg-5 img-rounded img-responsive" style="max-width: 40%">
+          <div class="col-lg-7">
+            <p>The <a href="http://www.uoguelph.ca/" target="_blank">University of Guelph</a> was founded in 1964, but its origins can be traced ninety years prior to its founding; in 1874. It has since been one of the top comprehensive universities in Canada.</p>
+            <p>The <a href="https://www.uoguelph.ca/computing/" target="_blank">School of Computer Science</a> at the University of Guelph was founded in 1971. SoCS has a plethora of talented faculty and staff, some of which I had the pleasure to work with (<a href="https://www.uoguelph.ca/computing/people/greg-klotz" target="_blank">Greg Klotz</a>, <a href="https://www.uoguelph.ca/computing/people/kyle-johnston" target="_blank">Kyle Johnston</a> and <a href="https://www.uoguelph.ca/computing/people/judi-mccuaig" target="_blank">Judi McCuaig</a>).</p>
+            <p>I've been a student at the University of Guelph for two full years so far, now starting my third consecutive year.</p>
+          </div>
+        </div>
+
+        <!-- Job Description & Goals -->
+        <div class="jumbotron row tab-pane fade" id="description_goals" style="text-align: left">
+          <p>Being assigned the role of Undergraduate Research Assistant, I was assigned to do mainly two things:</p>
+          <ul class="bulletpoint">
+            <li>Create a program (Projection/Hourglass) that analyzes course and student data, calculates relevant statistics for it, and also create estimations for the future statistics.</li>
+            <li>Refactor the back-end and improve the web front-end for <a href="https://theory.stanford.edu/~aiken/moss/" target="_blank">Moss (Measure of Software Similarity)</a>.</li>
+          </ul>
+          <p>Projection/Hourglass was targeted specifically towards School of Computer Science faculty and staff use. Moss on the other hand, was more broad and could be used by any instructor for CIS courses (including professors and authorized TAs).</p>
+          <br><h2>Projection/Hourglass</h2>
+          <p>The data analysis program (codenamed "Projection" or "Hourglass") was written primarily with Python (including Python modules/packages available online) and some SQL (specifically MySQL). The program was required to read in .csv (comma seperated values) files containing the course data (specifically course information and information on the students attending the course.), and store the data read. The data is then used to calculate statistics (such as grade averages, drop/fail rate, course overlap rates, etc.).</p>
+          <p>Projection/Hourglass made significant use of data structures (mostly hash tables), object-oriented programming (classes/objects made for each course and student), and command-line arguments (depending on the argument given, functionality would change accordingly). It can run in both the command-line and a graphical user interface. To give you an idea of the wide range of functionality of the program, here some command-line arguments flags that can be used:
+            <ul class="bulletpoint">
+              <li>No command-line argument (only .csv files or directories inputted)
+                <ul>
+                  <li style="list-style-type:square">The program will print out the statistics/comparisons of all the courses listed in all the inputted files to the terminal and to a new .csv file for output.</li>
+                </ul>
+              </li>
+              <li>-GUI
+                <ul>
+                  <li style="list-style-type:square">Enables the graphical user interface component of the program. Rather than using and printing to the terminal, you can select your files through the GUI and also see the output in a window.</li>
+                </ul>
+              </li>
+              <li>-program
+                <ul>
+                  <li style="list-style-type:square">The program will run course comparisons only for courses within the specified program (according to the coded program outlines).</li>
+                  <li style="list-style-type:square">Example: '-program BCH.CS' would enable course comparisons (student overlap) only for the mandatory courses in the Bachelor of Computing - Computer Science program.</li>
+                </ul>
+              </li>
+              <li>-projection
+                <ul>
+                  <li style="list-style-type:square">The program will estimate projections for courses using the formula:<br></li>
+                  <li style="list-style-type:square">[W16_CIS*2500 num_students] = [F15_CIS*1500 num_students] * [F14_CIS*1500 --> W15_CIS*2500 avg_overlap] + [W15_CIS*2500 num_drop, num_fail]</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+          <p>The primary use of Projection/Hourglass is to look at the course overlaps (using the -program flag) and course projections (using the -projection flag). This is useful because it helps the School of Computer Science to decide how many slots to allocate for course sections, as well as see the overall progress of students and how they advance through the program. This can be insightful when considering course criteria and content.</p>
+          <br><h2>Moss</h2>
+          <p>Moss is a software system developed by Stanford to detect plagiarism, particularly in programming assignments. It supports a wide variety of languages, and is known to be quite accurate and effective.</p>
+          <p>The front-end consisted of an upload page, only accessible to instructors. This upload page required the professor/TA to:
+            <ol class="bulletpoint">
+              <li>Select the appropriate course.</li>
+              <li>Provide a unique one-word name for the assignment.</li>
+              <li>Select the language said assignment was written in.</li>
+              <li>Upload the archive file containing the student work to be analyzed.</li>
+              <li>Optionally upload an archive file containing files given to the students by the instructor.</li>
+              <li>Optionally input any comments they would like to mention to the academic integrity team.</li>
+            </ol>
+          </p>
+          <p>After a successfull submission, the back-end then handles and processes the assignment archive according to the other settings the instructor set (course, language, name).</p>
+          <p>The back-end is written in Python, and the web front-end in HTML/CSS. The back-end had to be changed to allow for automatic submission reorganization and archiving, whereas the front-end needed to be changed to improve the user interface and general ease-of-use.</p>
+          <br><h2>Goals</h2>
+          <p>Since this was my first 4-month work term, I made sure to make my goals straight-forward so they would not be unattainable:
+            <ul class="bulletpoint">
+              <li>Become more proficient with Python and gain more experience with SQL.
+                <ul>
+                  <li style="list-style-type:square">Having prior experience with Python (from previous courses and projects), I was happy to see that I'd be using Python once again. It is a very clean language, where you can get a lot done with not a lot of code. Most importantly, it's very readable, so other people reading my code will not have a hard time trying to make sense of it (given there are comments and documentation as well, of course). This is important because it's more than likely that the code I worked on will be worked on even further by someone else.</li>
+                  <li style="list-style-type:square">I was interested in gaining more experience with SQL, since it is almost always useful and advantageous to know how to use databases (both relational and non-relational). Initially, Projection/Hourglass utilized an in-memory database (meaning all data was stored as it was read from the file into memory), which works perfectly well, but for long-term purposes (i.e. utilizing a large number of course files, each containing a large number of students), a relational database would prove to be useful since the files would not have to be read everytime, but rather the data would be stored in the database as soon as it is read.</li>
+                </ul>
+              </li>
+              <li>Make sure my time and work were organized in a productive and efficient manner.
+                <ul>
+                  <li style="list-style-type:square">Since this wasn't a conventional job (i.e. working in an office with co-workers in a software development team), but rather a research position, I was working alone most of the time. Because I was working alone, I was generally on my own schedule. I wanted to make sure that the schedule I set for myself was efficient both in terms of time management and splitting up the work.</li>
+                </ul>
+              </li>
+              <li>Talk more frequently/freely with my supervisors and asking for help/questions when need-be, as well as providing regular status/progress updates.
+                <ul>
+                  <li style="list-style-type:square">I prefer to refrain from asking for help unless it's absolutely necessary. This is because not only do I not want to bother my peers with a bombardment of questions, but also because I feel as if I won't learn as much if someone is always holding my hand. Although this is true to an extent, it is important to ask questions and to regularly update your co-workers/supervisors on your progress.</li>
+                  <li style="list-style-type:square">To put it simply, if you're spending time on something and the progress made isn't at least somewhat proportional to the amount of time spent, it's time to ask questions.</li>
+                </ul>
+              </li>
+            </ol>
+          </p>
+
+        </div>
+
+        <!-- Conclusion and Acknowledgements -->
+        <div class="jumbotron row tab-pane fade" id="conclusion_acknowledgements">
+          <p>Working at the School of Computer Science has been a significant and relevant learning experience. The skills I've learned during my time will prove to be invaluable, not only for my professional career but also my academic one. My problem solving skills have improved after significant use of Python and some use of SQL, and my communication and disciplinary skills have also improved, with frequent communication with my supervisor and partners.</p>
+          <p>My experience with the School of Computer Science and the University of Guelph as an employer in general has been superb and eye-opening, so I'd like to thank <a href="https://www.uoguelph.ca/computing/people/greg-klotz" target="_blank">Greg Klotz</a> and <a href="https://www.uoguelph.ca/computing/people/kyle-johnston" target="_blank">Kyle Johnston</a> for their guidance and supervision, and I'd also like to thank <a href="https://www.recruitguelph.ca/cecs/contact-our-team" target="_blank">Laura Gatto</a>, <a href="https://www.uoguelph.ca/computing/people/judi-mccuaig" target="_blank">Judi McCuag</a>, and <a href="https://www.uoguelph.ca/computing/people/pascal-matsakis" target="_blank">Pascal Matsakis</a> for providing me with this great opportunity to learn and advance my skills, as well as giving back to the school at the same time.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

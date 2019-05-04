@@ -13,7 +13,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- CSS/JS -->
+    <!-- CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
@@ -34,8 +34,52 @@
     <div class="container">
       <!-- Header -->
       <div class="jumbotron">
-        <h1 class="center-block name">Website Currently Under Construction!</h1>
-        <h1 class="center-block name">Click <a href="resume.pdf" target="_blank">here</a> for my résumé.</h1>
-      </div>  
+        <img src="headshot.jpg" class="center-block img-circle img-responsive" style="max-width: 30%; border-radius: 50px;">
+        <h1 class="center-block name">Tony Attia</h1>
+        <!-- Navbar -->
+        <div class="container-fluid">
+          <nav class="center-block navbar navbar-default">
+            <ul class="nav navbar-nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#about">About</a></li>
+              <li><a data-toggle="tab" href="#contact">Contact</a></li>
+              <li><a href="resume.pdf" target="_blank">Résumé</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects & Reports<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="reports/DiscordBot/index.html" target="_blank">Discord Bot</a></li>
+                  <li><a href="reports/UofG_SoCS/index.html" target="_blank">University of Guelph - School of Computer Science</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+      </div>
+
+      <div class="tab-content">
+        <!-- About -->
+        <div class="center-block about tab-pane fade in active" id="about">
+          <p>Hi! My name is Antony, but most people call me Tony. I am a Computer Science graduate from the <a href="http://www.uoguelph.ca/" target="_blank">University of Guelph</a>, looking to utilize my skills as a full-time software engineer.</p>
+          <p>I have previously worked for <a href="https://tempuselectric.com/" target="_blank">Tempus Electric Bikes</a> as a Technical Advisor and Contractor, as well as the University of Guelph's <a href="https://www.uoguelph.ca/computing/" target="_blank">School of Computer Science</a> as an Undergraduate Research Assistant.</p>
+          <p>Outside of programming, my passions and interests include soccer (<a href="https://www.liverpoolfc.com/" target="_blank">Liverpool F.C.</a> fan here), geopolitics and international relations, the latest and greatest gadgets and computer hardware, and being a lifelong aviation geek!</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="tab-pane fade" id="contact">
+          <div class="center-block about" style="text-align: center">
+            <p>Feel free to email me, add me on LinkedIn, or visit my GitHub profile to take a look at what I'm working on in my spare time!</p>
+          </div>
+          <div class="center-block contact">
+            <div class="col-xs-4">
+              <a href="mailto:antony.attia@gmail.ca" target="_blank" title="Email" <i class="fa fa-envelope fa-fw"></i></a>
+            </div>
+            <div class="col-xs-4">
+              <a href="http://ca.linkedin.com/in/antonyattia" target="_blank" title="LinkedIn" <i class="fa fa-linkedin fa-fw"></i></a>
+            </div>
+            <div class="col-xs-4">
+              <a href="http://github.com/antonyattia" target="_blank" title="GitHub" <i class="fa fa-github fa-fw"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

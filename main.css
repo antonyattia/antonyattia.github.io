@@ -8,13 +8,16 @@
   font-family: 'Ubuntu', sans-serif;
   font-size: 450%;
   text-align: center;
-  padding-bottom: .25em;
+  padding-top: .25em;
+  padding-bottom: .30em;
 }
 
 .about {
   font-family: 'Ubuntu', sans-serif;
   font-size: 130%;
   max-width: 32.5em;
+  padding-top: .30em;
+  text-align: center;
 }
 
 .contact {
@@ -33,7 +36,8 @@
 
 .navbar {
   vertical-align: middle;
-  width: 25%;
+  width: 24%;
+  padding-right: 0.30em;
 }
 
 .navbar-nav > li > a, .navbar-brand {
